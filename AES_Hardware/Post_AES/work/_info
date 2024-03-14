@@ -1,0 +1,561 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1
+vAddRcon
+Z1 I:IQ>o19gRkM[e9L5o9`693
+Z2 VXWk6he2TJaSZP`8C2X?6U1
+Z3 dD:\HK5\CE213\LyThuyet\AES_Hardware\Post_AES
+Z4 w1639295382
+Z5 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/AddRcon.v
+Z6 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/AddRcon.v
+L0 1
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 o-work work -O0
+Z9 n@add@rcon
+Z10 !s100 _9ULHR1a`;gJlI6WcL_=n2
+Z11 !s108 1642598489.482000
+Z12 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/AddRcon.v|
+Z13 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/AddRcon.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vAddRoundKey
+Z14 Iah9Ci0UC^BAnle:KXMW6[3
+Z15 VNPZd4d?QHg;MC]dOW?_3f2
+R3
+Z16 w1639815251
+Z17 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/AddRoundKey.v
+Z18 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/AddRoundKey.v
+L0 1
+R7
+r1
+31
+R8
+Z19 n@add@round@key
+Z20 !s100 3JRz8]LAA90>6MHLSWj8N2
+Z21 !s108 1642598489.534000
+Z22 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/AddRoundKey.v|
+Z23 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/AddRoundKey.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vaddW
+Z24 IT<f2m;_WM4b?O9^jK?RE53
+Z25 Vj200`m]Oz]XoAKDjZnN`20
+R3
+Z26 w1639295492
+Z27 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/addW.v
+Z28 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/addW.v
+L0 1
+R7
+r1
+31
+R8
+Z29 nadd@w
+Z30 !s100 OUlQgF]OUI@_S7f==TQ]03
+Z31 !s108 1642598489.586000
+Z32 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/addW.v|
+Z33 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/addW.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vAES
+Z34 IJZ;@[lSiHIz__L2?Ml27S3
+Z35 V]fA<iQeSo9[><49K[B7:b3
+R3
+Z36 w1639833935
+Z37 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/AES.vo
+Z38 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/AES.vo
+L0 31
+R7
+r1
+31
+R8
+Z39 n@a@e@s
+Z40 !s100 c8?5GF@[3@KRQ1Pf?ILGO0
+Z41 !s108 1642598489.706000
+Z42 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/AES.vo|
+Z43 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/AES.vo|
+!i10b 1
+!s85 0
+!s101 -O0
+vCONTROL
+Z44 IE>?7h9UA9db51N47bnB]M3
+Z45 V;h5SOhc5ig<DZjIVb@W>P2
+R3
+Z46 w1639827088
+Z47 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/CONTROL.v
+Z48 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/CONTROL.v
+L0 1
+R7
+r1
+31
+R8
+Z49 n@c@o@n@t@r@o@l
+Z50 !s100 O:KjTeg9d0F9^IhNkOael2
+Z51 !s108 1642598490.613000
+Z52 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/CONTROL.v|
+Z53 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/CONTROL.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vCounter
+Z54 IH0GI:NNTT03jM60R`dcF[1
+Z55 V?8@S_PgSoSLXcmVZHm_QH3
+R3
+Z56 w1639831720
+Z57 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/Counter.v
+Z58 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/Counter.v
+L0 1
+R7
+r1
+31
+R8
+Z59 n@counter
+Z60 !s100 O]Am8PS8Hl=XP7JnDd39i2
+Z61 !s108 1642598490.662000
+Z62 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/Counter.v|
+Z63 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/Counter.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vCURRENT
+Z64 I?Ko4T@R@k:`V@=[79Z?X:1
+Z65 VSdf8U7ZX2>?lFH1nGfUH_1
+R3
+Z66 w1639828841
+Z67 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/CURRENT.v
+Z68 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/CURRENT.v
+L0 1
+R7
+r1
+31
+R8
+Z69 n@c@u@r@r@e@n@t
+Z70 !s100 IX0oPo=3ARW@eKJjH5]mP1
+Z71 !s108 1642598490.723000
+Z72 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/CURRENT.v|
+Z73 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/CURRENT.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vDATAPATH
+Z74 IVW04cGYX2AQeKl;`A>45^3
+Z75 Vg^JW;[P4H3>:<CVl@6C0N0
+R3
+Z76 w1639833777
+Z77 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/DATAPATH.v
+Z78 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/DATAPATH.v
+L0 1
+R7
+r1
+31
+R8
+Z79 n@d@a@t@a@p@a@t@h
+Z80 !s100 42cNffKZDM:C@ibb5`eZF1
+Z81 !s108 1642598490.773000
+Z82 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/DATAPATH.v|
+Z83 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/DATAPATH.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vinsmul
+Z84 Il0;8Ga?j4;=H<^PO6eZTI2
+Z85 VNE2?igzI^o:[5n?b1gEAW0
+R3
+Z86 w1639407942
+Z87 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/insmul.v
+Z88 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/insmul.v
+L0 1
+R7
+r1
+31
+R8
+Z89 !s100 RF[[CKPA5=l32eB_iKOjR1
+Z90 !s108 1642598490.823000
+Z91 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/insmul.v|
+Z92 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/insmul.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vInvMixcol
+Z93 I@GUXkm5H09B>hiRjl14gc0
+Z94 Von4PY92_odg=c3maI^WL[0
+R3
+Z95 w1639407803
+Z96 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvMixcol.v
+Z97 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvMixcol.v
+L0 1
+R7
+r1
+31
+R8
+Z98 n@inv@mixcol
+Z99 !s100 SL3jlj3d_;^Cz0?4cmDgd0
+Z100 !s108 1642598490.874000
+Z101 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvMixcol.v|
+Z102 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvMixcol.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vInvMixColumns
+Z103 IE44kfjae_4i?HSf5jIL1J1
+Z104 VA8HV^UfWde>34OM>VnOWh3
+R3
+Z105 w1639407826
+Z106 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvMixColumns.v
+Z107 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvMixColumns.v
+L0 1
+R7
+r1
+31
+R8
+Z108 n@inv@mix@columns
+Z109 !s100 lGI[YELQ@EM6>8@>?hKXj2
+Z110 !s108 1642598490.923000
+Z111 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvMixColumns.v|
+Z112 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvMixColumns.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vInvS_box
+Z113 Ilb<fma97JbSmhgb_jO?IN3
+Z114 V3aS_;VA3Ah]Y5B;WbjTVk3
+R3
+Z115 w1639407485
+Z116 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvS_box.v
+Z117 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvS_box.v
+L0 1
+R7
+r1
+31
+R8
+Z118 n@inv@s_box
+Z119 !s100 _BaRVldoP;4c7:E02hLEc2
+Z120 !s108 1642598490.980000
+Z121 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvS_box.v|
+Z122 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvS_box.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vInvShiftRows
+Z123 IimM5cfYF7>D`XmO9^78R70
+Z124 VU9CeAVh[hA9>E78mRb5QW3
+R3
+Z125 w1639407195
+Z126 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvShiftRows.v
+Z127 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvShiftRows.v
+L0 1
+R7
+r1
+31
+R8
+Z128 n@inv@shift@rows
+Z129 !s100 0[ioJ]IDHiF;Rafk1[d8H2
+Z130 !s108 1642598491.034000
+Z131 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvShiftRows.v|
+Z132 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvShiftRows.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vInvSubBytes
+Z133 IY2<OIlc:kz<XP[CM5:?@^2
+Z134 VHIb9R4n=j[2LeOVME2QQn0
+R3
+Z135 w1639407398
+Z136 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvSubBytes.v
+Z137 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvSubBytes.v
+L0 1
+R7
+r1
+31
+R8
+Z138 n@inv@sub@bytes
+Z139 !s100 o7Dlgn1^^adc0T4JXZno]1
+Z140 !s108 1642598491.085000
+Z141 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvSubBytes.v|
+Z142 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvSubBytes.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vKeyExpansion
+Z143 IS4h71SUckb^llXbRiLCL63
+Z144 VG]AH1mC42FY2Izl]5S?nA1
+R3
+Z145 w1639817227
+Z146 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/KeyExpansion.v
+Z147 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/KeyExpansion.v
+L0 1
+R7
+r1
+31
+R8
+Z148 n@key@expansion
+Z149 !s100 J^Ji:;PTjEzjZmh=N9YDP0
+Z150 !s108 1642598491.134000
+Z151 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/KeyExpansion.v|
+Z152 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/KeyExpansion.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vmixcol
+Z153 IDHXU0bN2G^JPn]S`aGZ403
+Z154 V6U5jKlRC@]BQ8jjDP;<ld2
+R3
+Z155 w1639294262
+Z156 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/mixcol.v
+Z157 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/mixcol.v
+L0 1
+R7
+r1
+31
+R8
+Z158 !s100 3zFTLH>`ACO1XHj:?^_TY0
+Z159 !s108 1642598491.187000
+Z160 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/mixcol.v|
+Z161 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/mixcol.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMixColumns
+Z162 I7<l[hek]QAZfNF3[^Tg^T0
+Z163 VMN6cCQSJ19k33fhWi]dCE3
+R3
+Z164 w1639406961
+Z165 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/MixColumns.v
+Z166 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/MixColumns.v
+L0 1
+R7
+r1
+31
+R8
+Z167 n@mix@columns
+Z168 !s100 Z0oAbY1OZDImYeR]D6^f`2
+Z169 !s108 1642598491.238000
+Z170 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/MixColumns.v|
+Z171 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/MixColumns.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vmul2
+Z172 IBn>CzVjO3E6k:LK?VR=D:0
+Z173 V?22H<:hZd<d3ho;:L2`e_3
+R3
+Z174 w1639294422
+Z175 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/mul2.v
+Z176 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/mul2.v
+L0 1
+R7
+r1
+31
+R8
+Z177 !s100 =G]HfadGIXidLV0T`I0z72
+Z178 !s108 1642598491.293000
+Z179 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/mul2.v|
+Z180 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/mul2.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vNEXT
+Z181 IMollZHXok[:fzShPTZAfC1
+Z182 V`C1]JH9m@N:31I:C4:?>D2
+R3
+Z183 w1639831585
+Z184 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/NEXT.v
+Z185 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/NEXT.v
+L0 1
+R7
+r1
+31
+R8
+Z186 n@n@e@x@t
+Z187 !s100 hLhKG`;9CbQ>kQjC3f8La0
+Z188 !s108 1642598491.343000
+Z189 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/NEXT.v|
+Z190 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/NEXT.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vOUTPUT
+Z191 IXDY>j]h8oQ1P9k0YcUaa=3
+Z192 VWn1g05NO>aJ]G>PIeCB`m3
+R3
+Z193 w1639831324
+Z194 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/OUTPUT.v
+Z195 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/OUTPUT.v
+L0 1
+R7
+r1
+31
+R8
+Z196 n@o@u@t@p@u@t
+Z197 !s100 `Q^PaeHPLB5[@7]l3Xfd;2
+Z198 !s108 1642598491.391000
+Z199 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/OUTPUT.v|
+Z200 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/OUTPUT.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vRcon
+Z201 I2QMNff[<mET`T2ch_@Wcf3
+Z202 Vn63MKI[M8<<7FjSU`JQZ23
+R3
+Z203 w1639293797
+Z204 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/Rcon.v
+Z205 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/Rcon.v
+L0 1
+R7
+r1
+31
+R8
+Z206 n@rcon
+Z207 !s100 AG>g2CeZO^0XR<F_TN=Db3
+Z208 !s108 1642598491.443000
+Z209 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/Rcon.v|
+Z210 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/Rcon.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vREG
+Z211 ITdSi>B?jfkN38cX0gMz1a0
+Z212 VkbKU[=WBO<HYSKQ0NiX5;2
+R3
+Z213 w1639293781
+Z214 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/REG.v
+Z215 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/REG.v
+L0 1
+R7
+r1
+31
+R8
+Z216 n@r@e@g
+Z217 !s100 SU7Tb7XXnnl6dC1mA1^lQ1
+Z218 !s108 1642598491.492000
+Z219 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/REG.v|
+Z220 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/REG.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vRotWord
+Z221 IoIRRJ8]I=KoHaS>?fTLmI3
+Z222 VbXN2XMcgEM0DA5l=[NH_Z1
+R3
+Z223 w1639295211
+Z224 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/RotWord.v
+Z225 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/RotWord.v
+L0 1
+R7
+r1
+31
+R8
+Z226 n@rot@word
+Z227 !s100 Fe3S8:EhEL5SP@VLA9gzz0
+Z228 !s108 1642598491.550000
+Z229 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/RotWord.v|
+Z230 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/RotWord.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vS_box
+Z231 I5W2fmRJR?o?e8o_VahMlF3
+Z232 V2U9K3Ya]CJScO75YfF5n=2
+R3
+Z233 w1639817424
+Z234 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/S_box.v
+Z235 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/S_box.v
+L0 1
+R7
+r1
+31
+R8
+Z236 n@s_box
+Z237 !s100 5T=AXzIPIOXf;HZcLE4g<3
+Z238 !s108 1642598491.600000
+Z239 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/S_box.v|
+Z240 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/S_box.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vShiftRows
+Z241 I>T49ma]VgZj_GO?PK1SAZ0
+Z242 VDD[ZG0S7K9D3WJD@O><4?2
+R3
+Z243 w1639406923
+Z244 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/ShiftRows.v
+Z245 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/ShiftRows.v
+L0 1
+R7
+r1
+31
+R8
+Z246 n@shift@rows
+Z247 !s100 aWbi@7iGfLoK`DF`:Bm]P1
+Z248 !s108 1642598491.655000
+Z249 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/ShiftRows.v|
+Z250 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/ShiftRows.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vSubBytes
+Z251 IMA;^9djE3^oIlk@VS<=361
+Z252 V_mk5Jd0dkXND7ZzdX=S>[3
+R3
+Z253 w1639817426
+Z254 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/SubBytes.v
+Z255 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/SubBytes.v
+L0 1
+R7
+r1
+31
+R8
+Z256 n@sub@bytes
+Z257 !s100 ?Q>>^PIQI:0F1]<6K:4Z:3
+Z258 !s108 1642598491.716000
+Z259 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/SubBytes.v|
+Z260 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/SubBytes.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vSubWord
+Z261 IeO5nUSfY6Q6f2zT^]9eTN1
+Z262 V`HWfEFhF]IRa5?zPzRdon1
+R3
+Z263 w1639295295
+Z264 8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/SubWord.v
+Z265 FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/SubWord.v
+L0 1
+R7
+r1
+31
+R8
+Z266 n@sub@word
+!i10b 1
+Z267 !s100 d1edFHYg`8]VLL=NV6P0^3
+!s85 0
+Z268 !s108 1642598491.768000
+Z269 !s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/SubWord.v|
+Z270 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/SubWord.v|
+!s101 -O0
+vtestbench
+!i10b 1
+!s100 `oY4XF1fe>7_MO2DeN][O2
+I<l07EL^ch?k`>RWVo06ke2
+Z271 VhGfW:390DM[oDMzegDH9`2
+R3
+Z272 w1642582546
+8D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/testbench.v
+FD:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/testbench.v
+L0 2
+R7
+r1
+!s85 0
+31
+!s108 1642598491.832000
+!s107 D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/testbench.v|
+!s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/testbench.v|
+!s101 -O0
+R8

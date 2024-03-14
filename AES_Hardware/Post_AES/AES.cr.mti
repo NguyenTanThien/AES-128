@@ -1,0 +1,204 @@
+D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/Rcon.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/Rcon.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Rcon
+
+Top level modules:
+	Rcon
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/AddRoundKey.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/AddRoundKey.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module AddRoundKey
+
+Top level modules:
+	AddRoundKey
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/S_box.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/S_box.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module S_box
+
+Top level modules:
+	S_box
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/CURRENT.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/CURRENT.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module CURRENT
+
+Top level modules:
+	CURRENT
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/mixcol.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/mixcol.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module mixcol
+
+Top level modules:
+	mixcol
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/NEXT.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/NEXT.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module NEXT
+
+Top level modules:
+	NEXT
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvS_box.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvS_box.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module InvS_box
+
+Top level modules:
+	InvS_box
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/insmul.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/insmul.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module insmul
+
+Top level modules:
+	insmul
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/Counter.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/Counter.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module Counter
+
+Top level modules:
+	Counter
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/AES.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/AES.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module AES
+
+Top level modules:
+	AES
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/CONTROL.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/CONTROL.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module CONTROL
+
+Top level modules:
+	CONTROL
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/ShiftRows.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/ShiftRows.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module ShiftRows
+
+Top level modules:
+	ShiftRows
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/RotWord.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/RotWord.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module RotWord
+
+Top level modules:
+	RotWord
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/OUTPUT.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/OUTPUT.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module OUTPUT
+
+Top level modules:
+	OUTPUT
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/AddRcon.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/AddRcon.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module AddRcon
+
+Top level modules:
+	AddRcon
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvMixColumns.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvMixColumns.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module InvMixColumns
+
+Top level modules:
+	InvMixColumns
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvShiftRows.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvShiftRows.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module InvShiftRows
+
+Top level modules:
+	InvShiftRows
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvSubBytes.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvSubBytes.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module InvSubBytes
+
+Top level modules:
+	InvSubBytes
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/KeyExpansion.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/KeyExpansion.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module KeyExpansion
+
+Top level modules:
+	KeyExpansion
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/REG.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/REG.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module REG
+
+Top level modules:
+	REG
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/SubWord.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/SubWord.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module SubWord
+
+Top level modules:
+	SubWord
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/DATAPATH.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/DATAPATH.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module DATAPATH
+
+Top level modules:
+	DATAPATH
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/MixColumns.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/MixColumns.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module MixColumns
+
+Top level modules:
+	MixColumns
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/addW.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/addW.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module addW
+
+Top level modules:
+	addW
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/AES.vo {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/AES.vo
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module AES
+
+Top level modules:
+	AES
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/mul2.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/mul2.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module mul2
+
+Top level modules:
+	mul2
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/testbench.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/testbench.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module testbench
+
+Top level modules:
+	testbench
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvMixcol.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/InvMixcol.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module InvMixcol
+
+Top level modules:
+	InvMixcol
+
+} {} {}} D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/SubBytes.v {1 {vlog -work work D:/HK5/CE213/LyThuyet/AES_Hardware/Post_AES/SubBytes.v
+Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+-- Compiling module SubBytes
+
+Top level modules:
+	SubBytes
+
+} {} {}}

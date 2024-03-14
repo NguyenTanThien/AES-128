@@ -1,0 +1,621 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1
+vAddRcon
+Z1 !s100 B[`4nO`dEnD0R?8PS?H9<3
+Z2 I?0gd_cX?k2K]iFYLj4_`82
+Z3 VXWk6he2TJaSZP`8C2X?6U1
+Z4 dD:\HK5\CE213\LyThuyet\AES
+Z5 w1639295382
+Z6 8D:/HK5/CE213/LyThuyet/AES/AddRcon.v
+Z7 FD:/HK5/CE213/LyThuyet/AES/AddRcon.v
+L0 1
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/AddRcon.v|
+Z10 o-work work -O0
+Z11 n@add@rcon
+Z12 !s108 1639827802.010000
+Z13 !s107 D:/HK5/CE213/LyThuyet/AES/AddRcon.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vAddRoundKey
+Z14 !s100 FKRmE7;?@k<J>WhT^0nmn2
+Z15 Injo`@67BYFC0gPXf028Fk0
+Z16 VNPZd4d?QHg;MC]dOW?_3f2
+R4
+Z17 w1639815251
+Z18 8D:/HK5/CE213/LyThuyet/AES/AddRoundKey.v
+Z19 FD:/HK5/CE213/LyThuyet/AES/AddRoundKey.v
+L0 1
+R8
+r1
+31
+Z20 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/AddRoundKey.v|
+R10
+Z21 n@add@round@key
+Z22 !s108 1639827802.060000
+Z23 !s107 D:/HK5/CE213/LyThuyet/AES/AddRoundKey.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vaddW
+Z24 !s100 4??a7LY[K8GBa_Vie@ZVQ0
+Z25 I^dPPAMDhl[1Ti8N`5PQ6@1
+Z26 Vj200`m]Oz]XoAKDjZnN`20
+R4
+Z27 w1639295492
+Z28 8D:/HK5/CE213/LyThuyet/AES/addW.v
+Z29 FD:/HK5/CE213/LyThuyet/AES/addW.v
+L0 1
+R8
+r1
+31
+Z30 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/addW.v|
+R10
+Z31 nadd@w
+Z32 !s108 1639827802.107000
+Z33 !s107 D:/HK5/CE213/LyThuyet/AES/addW.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vAES
+Z34 IEj8SOMU2aQWJdcTNHQJT<1
+Z35 V]fA<iQeSo9[><49K[B7:b3
+R4
+Z36 w1639827796
+Z37 8D:/HK5/CE213/LyThuyet/AES/AES.v
+Z38 FD:/HK5/CE213/LyThuyet/AES/AES.v
+L0 1
+R8
+r1
+31
+Z39 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/AES.v|
+R10
+Z40 n@a@e@s
+Z41 !s100 zJ8YRfRob]RQO_9Bn]zHZ0
+Z42 !s108 1639827802.157000
+Z43 !s107 D:/HK5/CE213/LyThuyet/AES/AES.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vCONTROL
+Z44 !s100 CWicFddce;l:V`1HR9VNe1
+Z45 I2FJ2hnh1ao;gdIfEAzCzU3
+Z46 V;h5SOhc5ig<DZjIVb@W>P2
+R4
+Z47 w1639827088
+Z48 8D:/HK5/CE213/LyThuyet/AES/CONTROL.v
+Z49 FD:/HK5/CE213/LyThuyet/AES/CONTROL.v
+L0 1
+R8
+r1
+31
+Z50 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/CONTROL.v|
+R10
+Z51 n@c@o@n@t@r@o@l
+Z52 !s108 1639827802.203000
+Z53 !s107 D:/HK5/CE213/LyThuyet/AES/CONTROL.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vCounter
+Z54 !s100 :gQi5S2GhFTMMWl3_cj762
+Z55 IoNcJNPD_HbUkIkR3MW3;^3
+Z56 VA93Zl2g<Cf`8g84;KiSU42
+R4
+Z57 w1639409129
+Z58 8D:/HK5/CE213/LyThuyet/AES/Counter.v
+Z59 FD:/HK5/CE213/LyThuyet/AES/Counter.v
+L0 1
+R8
+r1
+31
+Z60 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/Counter.v|
+R10
+Z61 n@counter
+Z62 !s108 1639827802.250000
+Z63 !s107 D:/HK5/CE213/LyThuyet/AES/Counter.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vCURRENT
+Z64 !s100 iYTi1[ZH4]m9U18S4dcf>1
+Z65 I6:Q9g?lPdKe6Xo3V8m9ml1
+Z66 VSdf8U7ZX2>?lFH1nGfUH_1
+R4
+Z67 w1639815580
+Z68 8D:/HK5/CE213/LyThuyet/AES/CURRENT.v
+Z69 FD:/HK5/CE213/LyThuyet/AES/CURRENT.v
+L0 1
+R8
+r1
+31
+Z70 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/CURRENT.v|
+R10
+Z71 n@c@u@r@r@e@n@t
+Z72 !s108 1639827802.296000
+Z73 !s107 D:/HK5/CE213/LyThuyet/AES/CURRENT.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vDATAPATH
+Z74 !s100 Zc0<OHj=E3j_6iKcJmR901
+Z75 IL;TYWk9:@mb3@4RnXLI<E1
+Z76 Vg^JW;[P4H3>:<CVl@6C0N0
+R4
+Z77 w1639827180
+Z78 8D:/HK5/CE213/LyThuyet/AES/DATAPATH.v
+Z79 FD:/HK5/CE213/LyThuyet/AES/DATAPATH.v
+L0 1
+R8
+r1
+31
+Z80 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/DATAPATH.v|
+R10
+Z81 n@d@a@t@a@p@a@t@h
+Z82 !s108 1639827802.343000
+Z83 !s107 D:/HK5/CE213/LyThuyet/AES/DATAPATH.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vinsmul
+Z84 !s100 BeV7YBC8SYToK@Iig3C@H1
+Z85 IBO[L@L]V^dLdgMOjBLG8h3
+Z86 VNE2?igzI^o:[5n?b1gEAW0
+R4
+Z87 w1639407942
+Z88 8D:/HK5/CE213/LyThuyet/AES/insmul.v
+Z89 FD:/HK5/CE213/LyThuyet/AES/insmul.v
+L0 1
+R8
+r1
+31
+Z90 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/insmul.v|
+R10
+Z91 !s108 1639827802.392000
+Z92 !s107 D:/HK5/CE213/LyThuyet/AES/insmul.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vInvMixcol
+Z93 !s100 VT6jYJQ:G15B<Q2AFlL_03
+Z94 Ihn15U=Zd7hcABoaQ[6OPh0
+Z95 Von4PY92_odg=c3maI^WL[0
+R4
+Z96 w1639407803
+Z97 8D:/HK5/CE213/LyThuyet/AES/InvMixcol.v
+Z98 FD:/HK5/CE213/LyThuyet/AES/InvMixcol.v
+L0 1
+R8
+r1
+31
+Z99 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/InvMixcol.v|
+R10
+Z100 n@inv@mixcol
+Z101 !s108 1639827802.438000
+Z102 !s107 D:/HK5/CE213/LyThuyet/AES/InvMixcol.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vInvMixColumns
+Z103 !s100 oPFkhi8j5WHW<NIcU?=l[1
+Z104 ICOE6i?=3N`G]^Z>S=n<^93
+Z105 VA8HV^UfWde>34OM>VnOWh3
+R4
+Z106 w1639407826
+Z107 8D:/HK5/CE213/LyThuyet/AES/InvMixColumns.v
+Z108 FD:/HK5/CE213/LyThuyet/AES/InvMixColumns.v
+L0 1
+R8
+r1
+31
+Z109 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/InvMixColumns.v|
+R10
+Z110 n@inv@mix@columns
+Z111 !s108 1639827802.488000
+Z112 !s107 D:/HK5/CE213/LyThuyet/AES/InvMixColumns.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vInvS_box
+Z113 !s100 kFLD[l0JDZWiVTFkdh@i_2
+Z114 IKmcLzMjF<bWFm?`Mk3SR01
+Z115 V3aS_;VA3Ah]Y5B;WbjTVk3
+R4
+Z116 w1639407485
+Z117 8D:/HK5/CE213/LyThuyet/AES/InvS_box.v
+Z118 FD:/HK5/CE213/LyThuyet/AES/InvS_box.v
+L0 1
+R8
+r1
+31
+Z119 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/InvS_box.v|
+R10
+Z120 n@inv@s_box
+Z121 !s108 1639827802.536000
+Z122 !s107 D:/HK5/CE213/LyThuyet/AES/InvS_box.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vInvShiftRows
+Z123 !s100 2k[`G_HS@MCIbz;=_MYBD3
+Z124 IYL:9C4Ui<YVhFl0=Kc2Rb0
+Z125 VU9CeAVh[hA9>E78mRb5QW3
+R4
+Z126 w1639407195
+Z127 8D:/HK5/CE213/LyThuyet/AES/InvShiftRows.v
+Z128 FD:/HK5/CE213/LyThuyet/AES/InvShiftRows.v
+L0 1
+R8
+r1
+31
+Z129 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/InvShiftRows.v|
+R10
+Z130 n@inv@shift@rows
+Z131 !s108 1639827802.590000
+Z132 !s107 D:/HK5/CE213/LyThuyet/AES/InvShiftRows.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vInvSubBytes
+Z133 !s100 YFV]3H@Rl3<Vk5h3:loc;0
+Z134 I[A56eZWLAF<]fEFB21]k53
+Z135 VHIb9R4n=j[2LeOVME2QQn0
+R4
+Z136 w1639407398
+Z137 8D:/HK5/CE213/LyThuyet/AES/InvSubBytes.v
+Z138 FD:/HK5/CE213/LyThuyet/AES/InvSubBytes.v
+L0 1
+R8
+r1
+31
+Z139 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/InvSubBytes.v|
+R10
+Z140 n@inv@sub@bytes
+Z141 !s108 1639827802.640000
+Z142 !s107 D:/HK5/CE213/LyThuyet/AES/InvSubBytes.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vKeyExpansion
+Z143 !s100 `=D_iM4W3J1Mn4eDT]1X83
+Z144 I8k:DGPe`h6J7>DHeR1M6U2
+Z145 VG]AH1mC42FY2Izl]5S?nA1
+R4
+Z146 w1639817227
+Z147 8D:/HK5/CE213/LyThuyet/AES/KeyExpansion.v
+Z148 FD:/HK5/CE213/LyThuyet/AES/KeyExpansion.v
+L0 1
+R8
+r1
+31
+Z149 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/KeyExpansion.v|
+R10
+Z150 n@key@expansion
+Z151 !s108 1639827802.688000
+Z152 !s107 D:/HK5/CE213/LyThuyet/AES/KeyExpansion.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vmixcol
+Z153 !s100 IBkm5zgg0AUSQLanRJQ491
+Z154 I6Wk;E6BL]O0l0:UNO1Lm?1
+Z155 V6U5jKlRC@]BQ8jjDP;<ld2
+R4
+Z156 w1639294262
+Z157 8D:/HK5/CE213/LyThuyet/AES/mixcol.v
+Z158 FD:/HK5/CE213/LyThuyet/AES/mixcol.v
+L0 1
+R8
+r1
+31
+Z159 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/mixcol.v|
+R10
+Z160 !s108 1639827802.742000
+Z161 !s107 D:/HK5/CE213/LyThuyet/AES/mixcol.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMixColumn
+Z162 !s100 iJ;Ch]CiHNo3ZDQ;C9C430
+Z163 I^T7:WZIYEZb5kS;1`Nbf?1
+Z164 V_Db9C]icCfCbgGL45440?2
+R4
+Z165 w1639294159
+Z166 8D:/HK5/CE213/LyThuyet/AES/MixColumn.v
+Z167 FD:/HK5/CE213/LyThuyet/AES/MixColumn.v
+L0 1
+R8
+r1
+31
+Z168 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/MixColumn.v|
+R10
+Z169 n@mix@column
+Z170 !s108 1639295915.224000
+Z171 !s107 D:/HK5/CE213/LyThuyet/AES/MixColumn.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vMixColumns
+Z172 !s100 =FocTcl8CdGk`@XifR6Pj2
+Z173 I3n`138;oBd]R;gYKZE^nS3
+Z174 VMN6cCQSJ19k33fhWi]dCE3
+R4
+Z175 w1639406961
+Z176 8D:/HK5/CE213/LyThuyet/AES/MixColumns.v
+Z177 FD:/HK5/CE213/LyThuyet/AES/MixColumns.v
+L0 1
+R8
+r1
+31
+Z178 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/MixColumns.v|
+R10
+Z179 n@mix@columns
+Z180 !s108 1639827802.789000
+Z181 !s107 D:/HK5/CE213/LyThuyet/AES/MixColumns.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vmul2
+Z182 !s100 ^J9`zhoUi=gcA7V_kR]U43
+Z183 Ia0=aGG<D=N5Q@9FD345Vk2
+Z184 V?22H<:hZd<d3ho;:L2`e_3
+R4
+Z185 w1639294422
+Z186 8D:/HK5/CE213/LyThuyet/AES/mul2.v
+Z187 FD:/HK5/CE213/LyThuyet/AES/mul2.v
+L0 1
+R8
+r1
+31
+Z188 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/mul2.v|
+R10
+Z189 !s108 1639827802.841000
+Z190 !s107 D:/HK5/CE213/LyThuyet/AES/mul2.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vNEXT
+Z191 !s100 @oQRz?<h^lB22KA:VGLN:2
+Z192 ILa?G9AKUh_2Y=9BQEoT_F2
+Z193 V`C1]JH9m@N:31I:C4:?>D2
+R4
+Z194 w1639815751
+Z195 8D:/HK5/CE213/LyThuyet/AES/NEXT.v
+Z196 FD:/HK5/CE213/LyThuyet/AES/NEXT.v
+L0 1
+R8
+r1
+31
+Z197 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/NEXT.v|
+R10
+Z198 n@n@e@x@t
+Z199 !s108 1639827802.890000
+Z200 !s107 D:/HK5/CE213/LyThuyet/AES/NEXT.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vOUTPUT
+Z201 !s100 L]HkAbQUXoE3V^FeLKBgM1
+Z202 I3m<3gBBW2LkXoaPUae=R71
+Z203 VWn1g05NO>aJ]G>PIeCB`m3
+R4
+Z204 w1639816062
+Z205 8D:/HK5/CE213/LyThuyet/AES/OUTPUT.v
+Z206 FD:/HK5/CE213/LyThuyet/AES/OUTPUT.v
+L0 1
+R8
+r1
+31
+Z207 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/OUTPUT.v|
+R10
+Z208 n@o@u@t@p@u@t
+Z209 !s108 1639827802.937000
+Z210 !s107 D:/HK5/CE213/LyThuyet/AES/OUTPUT.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vRcon
+Z211 !s100 Sh@3L=@A7<QI>7nMjDc2V1
+Z212 I8T;CeMBz46lhF<a370^Ek3
+Z213 Vn63MKI[M8<<7FjSU`JQZ23
+R4
+Z214 w1639293797
+Z215 8D:/HK5/CE213/LyThuyet/AES/Rcon.v
+Z216 FD:/HK5/CE213/LyThuyet/AES/Rcon.v
+L0 1
+R8
+r1
+31
+Z217 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/Rcon.v|
+R10
+Z218 n@rcon
+Z219 !s108 1639827802.990000
+Z220 !s107 D:/HK5/CE213/LyThuyet/AES/Rcon.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vREG
+Z221 !s100 k@fFgA=Y[4M`bT9k:MidP2
+Z222 I6H<f9nMT^oYH?MLFOLGfW1
+Z223 VkbKU[=WBO<HYSKQ0NiX5;2
+R4
+Z224 w1639293781
+Z225 8D:/HK5/CE213/LyThuyet/AES/REG.v
+Z226 FD:/HK5/CE213/LyThuyet/AES/REG.v
+L0 1
+R8
+r1
+31
+Z227 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/REG.v|
+R10
+Z228 n@r@e@g
+Z229 !s108 1639827803.037000
+Z230 !s107 D:/HK5/CE213/LyThuyet/AES/REG.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vRotWord
+Z231 !s100 OiEWl]MQmn_47@cf=HEbN0
+Z232 Ie@DGZc0VDm[Lll_E^11_T1
+Z233 VbXN2XMcgEM0DA5l=[NH_Z1
+R4
+Z234 w1639295211
+Z235 8D:/HK5/CE213/LyThuyet/AES/RotWord.v
+Z236 FD:/HK5/CE213/LyThuyet/AES/RotWord.v
+L0 1
+R8
+r1
+31
+Z237 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/RotWord.v|
+R10
+Z238 n@rot@word
+Z239 !s108 1639827803.085000
+Z240 !s107 D:/HK5/CE213/LyThuyet/AES/RotWord.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vS_box
+Z241 !s100 44d2VPcMfPKT`CBgBnmhD0
+Z242 Ih6XKZ`?29:AlA6OTi[a`52
+Z243 V2U9K3Ya]CJScO75YfF5n=2
+R4
+Z244 w1639817424
+Z245 8D:/HK5/CE213/LyThuyet/AES/S_box.v
+Z246 FD:/HK5/CE213/LyThuyet/AES/S_box.v
+L0 1
+R8
+r1
+31
+Z247 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/S_box.v|
+R10
+Z248 n@s_box
+Z249 !s108 1639827803.132000
+Z250 !s107 D:/HK5/CE213/LyThuyet/AES/S_box.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vShiftRow
+Z251 !s100 Gg^H]odHi?1E2J0K?^oaJ3
+Z252 I>3iZ<nk@n5n=7J]`NEj1j3
+Z253 VGoZ=f4;zmIhX[fh3Vh8BB1
+R4
+Z254 w1639294003
+Z255 8D:/HK5/CE213/LyThuyet/AES/ShiftRow.v
+Z256 FD:/HK5/CE213/LyThuyet/AES/ShiftRow.v
+L0 1
+R8
+r1
+31
+Z257 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/ShiftRow.v|
+R10
+Z258 n@shift@row
+Z259 !s108 1639295915.173000
+Z260 !s107 D:/HK5/CE213/LyThuyet/AES/ShiftRow.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vShiftRows
+Z261 !s100 Ng7Wd7YF<4T@NRHRGlXeK2
+Z262 ICCF4c]nMJ8e3I72KcVQzD0
+Z263 VDD[ZG0S7K9D3WJD@O><4?2
+R4
+Z264 w1639406923
+Z265 8D:/HK5/CE213/LyThuyet/AES/ShiftRows.v
+Z266 FD:/HK5/CE213/LyThuyet/AES/ShiftRows.v
+L0 1
+R8
+r1
+31
+Z267 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/ShiftRows.v|
+R10
+Z268 n@shift@rows
+Z269 !s108 1639827803.181000
+Z270 !s107 D:/HK5/CE213/LyThuyet/AES/ShiftRows.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vSubByte
+Z271 !s100 TO4kA3Xg46znA`Pac?n3j1
+Z272 I?FKV]Mj]Hl6:V];aFhVLV2
+Z273 VD?RUk5dDI;;djkAn:N2I;3
+R4
+Z274 w1639293822
+Z275 8D:/HK5/CE213/LyThuyet/AES/SubByte.v
+Z276 FD:/HK5/CE213/LyThuyet/AES/SubByte.v
+L0 1
+R8
+r1
+31
+Z277 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/SubByte.v|
+R10
+Z278 n@sub@byte
+Z279 !s108 1639295915.126000
+Z280 !s107 D:/HK5/CE213/LyThuyet/AES/SubByte.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vSubBytes
+Z281 !s100 ?H0MU<^]GZLKCSc@?kD5n0
+Z282 IMaL2fl`Io>AXiImZIJjFI0
+Z283 V_mk5Jd0dkXND7ZzdX=S>[3
+R4
+Z284 w1639817426
+Z285 8D:/HK5/CE213/LyThuyet/AES/SubBytes.v
+Z286 FD:/HK5/CE213/LyThuyet/AES/SubBytes.v
+L0 1
+R8
+r1
+31
+Z287 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/SubBytes.v|
+R10
+Z288 n@sub@bytes
+Z289 !s108 1639827803.228000
+Z290 !s107 D:/HK5/CE213/LyThuyet/AES/SubBytes.v|
+!i10b 1
+!s85 0
+!s101 -O0
+vSubWord
+Z291 !s100 df8_gC3Pof<W]Qd19MlhP0
+Z292 I9BP0J473_0cD0`:>VaCP@1
+Z293 V`HWfEFhF]IRa5?zPzRdon1
+R4
+Z294 w1639295295
+Z295 8D:/HK5/CE213/LyThuyet/AES/SubWord.v
+Z296 FD:/HK5/CE213/LyThuyet/AES/SubWord.v
+L0 1
+R8
+r1
+31
+Z297 !s90 -reportprogress|300|-work|work|D:/HK5/CE213/LyThuyet/AES/SubWord.v|
+R10
+Z298 n@sub@word
+!i10b 1
+!s85 0
+Z299 !s108 1639827803.277000
+Z300 !s107 D:/HK5/CE213/LyThuyet/AES/SubWord.v|
+!s101 -O0
+vtestbench
+!i10b 1
+!s100 2oln3TkVYOQ@VkRO74C732
+In;n2GaB:aDhn69^XFeMd82
+Z301 VhGfW:390DM[oDMzegDH9`2
+R4
+w1639827804
+Z302 8D:\HK5\CE213\LyThuyet\AES\testbench.v
+Z303 FD:\HK5\CE213\LyThuyet\AES\testbench.v
+L0 1
+R8
+r1
+!s85 0
+31
+!s108 1639827804.779000
+!s107 D:\HK5\CE213\LyThuyet\AES\testbench.v|
+Z304 !s90 -reportprogress|300|-work|work|D:\HK5\CE213\LyThuyet\AES\testbench.v|
+!s101 -O0
+R10

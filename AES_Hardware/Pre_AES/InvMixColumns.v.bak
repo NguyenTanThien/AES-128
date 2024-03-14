@@ -1,0 +1,10 @@
+module InvMixColumns(IN, OUT);
+  input wire [127:0] IN;
+  output wire [127:0] OUT;
+  invmixcol inst(IN[31:0],OUT[31:0]);
+  invmixcol inst1(IN[63:32],OUT[63:32]);
+  invmixcol inst2(IN[95:64],OUT[95:64]);
+  invmixcol inst3(IN[127:96],OUT[127:96]);
+endmodule
+  
+  

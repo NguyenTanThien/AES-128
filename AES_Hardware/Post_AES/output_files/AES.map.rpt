@@ -1,0 +1,1435 @@
+Analysis & Synthesis report for AES
+Sat Dec 18 20:24:28 2021
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: CONTROL:inst1|NEXT:a
+ 12. Parameter Settings for User Entity Instance: CONTROL:inst1|OUTPUT:o
+ 13. Parameter Settings for User Entity Instance: DATAPATH:inst|REG:inst10
+ 14. Parameter Settings for User Entity Instance: DATAPATH:inst|REG:inst11
+ 15. Parameter Settings for User Entity Instance: DATAPATH:inst|KeyExpansion:inst1|REG:inst11
+ 16. Parameter Settings for User Entity Instance: DATAPATH:inst|REG:inst14
+ 17. Parameter Settings for User Entity Instance: DATAPATH:inst|REG:inst3
+ 18. Parameter Settings for User Entity Instance: DATAPATH:inst|REG:inst12
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
+ 21. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Dec 18 20:24:27 2021           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
+; Revision Name                      ; AES                                             ;
+; Top-level Entity Name              ; AES                                             ;
+; Family                             ; Cyclone II                                      ;
+; Total logic elements               ; 9,254                                           ;
+;     Total combinational functions  ; 8,998                                           ;
+;     Dedicated logic registers      ; 520                                             ;
+; Total registers                    ; 520                                             ;
+; Total pins                         ; 260                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 0                                               ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; AES                ; AES                ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                     ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                       ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+; SubWord.v                        ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/SubWord.v       ;         ;
+; SubBytes.v                       ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/SubBytes.v      ;         ;
+; ShiftRows.v                      ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/ShiftRows.v     ;         ;
+; S_box.v                          ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/S_box.v         ;         ;
+; RotWord.v                        ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/RotWord.v       ;         ;
+; REG.v                            ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/REG.v           ;         ;
+; OUTPUT.v                         ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/OUTPUT.v        ;         ;
+; NEXT.v                           ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/NEXT.v          ;         ;
+; mul2.v                           ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/mul2.v          ;         ;
+; MixColumns.v                     ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/MixColumns.v    ;         ;
+; mixcol.v                         ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/mixcol.v        ;         ;
+; KeyExpansion.v                   ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/KeyExpansion.v  ;         ;
+; InvSubBytes.v                    ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/InvSubBytes.v   ;         ;
+; InvShiftRows.v                   ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/InvShiftRows.v  ;         ;
+; InvS_box.v                       ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/InvS_box.v      ;         ;
+; InvMixColumns.v                  ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/InvMixColumns.v ;         ;
+; InvMixcol.v                      ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/InvMixcol.v     ;         ;
+; insmul.v                         ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/insmul.v        ;         ;
+; DATAPATH.v                       ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/DATAPATH.v      ;         ;
+; CURRENT.v                        ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/CURRENT.v       ;         ;
+; Counter.v                        ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/Counter.v       ;         ;
+; CONTROL.v                        ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/CONTROL.v       ;         ;
+; AES.v                            ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/AES.v           ;         ;
+; addW.v                           ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/addW.v          ;         ;
+; AddRoundKey.v                    ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/AddRoundKey.v   ;         ;
+; AddRcon.v                        ; yes             ; User Verilog HDL File  ; D:/HK5/CE213/LyThuyet/AES/Post_AES/AddRcon.v       ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Estimated Total logic elements              ; 9,254 ;
+;                                             ;       ;
+; Total combinational functions               ; 8998  ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 8510  ;
+;     -- 3 input functions                    ; 387   ;
+;     -- <=2 input functions                  ; 101   ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 8995  ;
+;     -- arithmetic mode                      ; 3     ;
+;                                             ;       ;
+; Total registers                             ; 520   ;
+;     -- Dedicated logic registers            ; 520   ;
+;     -- I/O registers                        ; 0     ;
+;                                             ;       ;
+; I/O pins                                    ; 260   ;
+; Embedded Multiplier 9-bit elements          ; 0     ;
+; Maximum fan-out node                        ; CLK   ;
+; Maximum fan-out                             ; 520   ;
+; Total fan-out                               ; 37351 ;
+; Average fan-out                             ; 3.82  ;
++---------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                      ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                             ; Library Name ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+--------------+
+; |AES                        ; 8998 (1)          ; 520 (0)      ; 0           ; 0            ; 0       ; 0         ; 260  ; 0            ; |AES                                                            ; work         ;
+;    |CONTROL:inst1|          ; 36 (0)            ; 4 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|CONTROL:inst1                                              ; work         ;
+;       |CURRENT:b|           ; 0 (0)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|CONTROL:inst1|CURRENT:b                                    ; work         ;
+;       |NEXT:a|              ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|CONTROL:inst1|NEXT:a                                       ; work         ;
+;       |OUTPUT:o|            ; 21 (21)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|CONTROL:inst1|OUTPUT:o                                     ; work         ;
+;    |DATAPATH:inst|          ; 8961 (526)        ; 516 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst                                              ; work         ;
+;       |AddRoundKey:inst2|   ; 128 (128)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|AddRoundKey:inst2                            ; work         ;
+;       |Counter:inst|        ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|Counter:inst                                 ; work         ;
+;       |InvMixColumns:inst7| ; 294 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvMixColumns:inst7                          ; work         ;
+;          |InvMixcol:inst1|  ; 73 (73)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvMixColumns:inst7|InvMixcol:inst1          ; work         ;
+;          |InvMixcol:inst2|  ; 73 (73)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvMixColumns:inst7|InvMixcol:inst2          ; work         ;
+;          |InvMixcol:inst3|  ; 76 (76)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvMixColumns:inst7|InvMixcol:inst3          ; work         ;
+;          |InvMixcol:inst|   ; 72 (72)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvMixColumns:inst7|InvMixcol:inst           ; work         ;
+;       |InvSubBytes:inst9|   ; 3328 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvSubBytes:inst9                            ; work         ;
+;          |InvS_box:inst10|  ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst10            ; work         ;
+;          |InvS_box:inst11|  ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst11            ; work         ;
+;          |InvS_box:inst12|  ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst12            ; work         ;
+;          |InvS_box:inst13|  ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst13            ; work         ;
+;          |InvS_box:inst14|  ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst14            ; work         ;
+;          |InvS_box:inst15|  ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst15            ; work         ;
+;          |InvS_box:inst1|   ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst1             ; work         ;
+;          |InvS_box:inst2|   ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst2             ; work         ;
+;          |InvS_box:inst3|   ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst3             ; work         ;
+;          |InvS_box:inst4|   ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst4             ; work         ;
+;          |InvS_box:inst5|   ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst5             ; work         ;
+;          |InvS_box:inst6|   ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst6             ; work         ;
+;          |InvS_box:inst7|   ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst7             ; work         ;
+;          |InvS_box:inst8|   ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst8             ; work         ;
+;          |InvS_box:inst9|   ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst9             ; work         ;
+;          |InvS_box:inst|    ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst              ; work         ;
+;       |KeyExpansion:inst1|  ; 1159 (191)        ; 128 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|KeyExpansion:inst1                           ; work         ;
+;          |AddRcon:inst6|    ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|KeyExpansion:inst1|AddRcon:inst6             ; work         ;
+;          |REG:inst11|       ; 0 (0)             ; 128 (128)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|KeyExpansion:inst1|REG:inst11                ; work         ;
+;          |SubWord:inst5|    ; 832 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5             ; work         ;
+;             |S_box:inst1|   ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst1 ; work         ;
+;             |S_box:inst2|   ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst2 ; work         ;
+;             |S_box:inst3|   ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst3 ; work         ;
+;             |S_box:inst|    ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst  ; work         ;
+;          |addW:inst1|       ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|KeyExpansion:inst1|addW:inst1                ; work         ;
+;          |addW:inst2|       ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|KeyExpansion:inst1|addW:inst2                ; work         ;
+;          |addW:inst3|       ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|KeyExpansion:inst1|addW:inst3                ; work         ;
+;          |addW:inst|        ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|KeyExpansion:inst1|addW:inst                 ; work         ;
+;       |MixColumns:inst6|    ; 192 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|MixColumns:inst6                             ; work         ;
+;          |mixcol:inst1|     ; 48 (48)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|MixColumns:inst6|mixcol:inst1                ; work         ;
+;          |mixcol:inst2|     ; 48 (48)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|MixColumns:inst6|mixcol:inst2                ; work         ;
+;          |mixcol:inst3|     ; 48 (48)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|MixColumns:inst6|mixcol:inst3                ; work         ;
+;          |mixcol:inst|      ; 48 (48)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|MixColumns:inst6|mixcol:inst                 ; work         ;
+;       |REG:inst10|          ; 0 (0)             ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|REG:inst10                                   ; work         ;
+;       |REG:inst11|          ; 0 (0)             ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|REG:inst11                                   ; work         ;
+;       |REG:inst12|          ; 0 (0)             ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|REG:inst12                                   ; work         ;
+;       |REG:inst14|          ; 0 (0)             ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|REG:inst14                                   ; work         ;
+;       |REG:inst3|           ; 0 (0)             ; 128 (128)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|REG:inst3                                    ; work         ;
+;       |SubBytes:inst4|      ; 3328 (0)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|SubBytes:inst4                               ; work         ;
+;          |S_box:inst10|     ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|SubBytes:inst4|S_box:inst10                  ; work         ;
+;          |S_box:inst11|     ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|SubBytes:inst4|S_box:inst11                  ; work         ;
+;          |S_box:inst12|     ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|SubBytes:inst4|S_box:inst12                  ; work         ;
+;          |S_box:inst13|     ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|SubBytes:inst4|S_box:inst13                  ; work         ;
+;          |S_box:inst14|     ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|SubBytes:inst4|S_box:inst14                  ; work         ;
+;          |S_box:inst15|     ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|SubBytes:inst4|S_box:inst15                  ; work         ;
+;          |S_box:inst1|      ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|SubBytes:inst4|S_box:inst1                   ; work         ;
+;          |S_box:inst2|      ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|SubBytes:inst4|S_box:inst2                   ; work         ;
+;          |S_box:inst3|      ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|SubBytes:inst4|S_box:inst3                   ; work         ;
+;          |S_box:inst4|      ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|SubBytes:inst4|S_box:inst4                   ; work         ;
+;          |S_box:inst5|      ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|SubBytes:inst4|S_box:inst5                   ; work         ;
+;          |S_box:inst6|      ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|SubBytes:inst4|S_box:inst6                   ; work         ;
+;          |S_box:inst7|      ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|SubBytes:inst4|S_box:inst7                   ; work         ;
+;          |S_box:inst8|      ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|SubBytes:inst4|S_box:inst8                   ; work         ;
+;          |S_box:inst9|      ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|SubBytes:inst4|S_box:inst9                   ; work         ;
+;          |S_box:inst|       ; 208 (208)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|DATAPATH:inst|SubBytes:inst4|S_box:inst                    ; work         ;
++-----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                           ;
++-----------------------------------------------------+--------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal            ; Free of Timing Hazards ;
++-----------------------------------------------------+--------------------------------+------------------------+
+; CONTROL:inst1|OUTPUT:o|tri_out_text1                ; CONTROL:inst1|OUTPUT:o|WideOr0 ; yes                    ;
+; CONTROL:inst1|OUTPUT:o|tri_out_text2                ; CONTROL:inst1|OUTPUT:o|WideOr0 ; yes                    ;
+; CONTROL:inst1|OUTPUT:o|tri_keyex                    ; CONTROL:inst1|OUTPUT:o|WideOr0 ; yes                    ;
+; CONTROL:inst1|OUTPUT:o|tri_shift                    ; CONTROL:inst1|OUTPUT:o|WideOr0 ; yes                    ;
+; CONTROL:inst1|OUTPUT:o|tri_text                     ; CONTROL:inst1|OUTPUT:o|WideOr0 ; yes                    ;
+; CONTROL:inst1|OUTPUT:o|tri_Mix                      ; CONTROL:inst1|OUTPUT:o|WideOr0 ; yes                    ;
+; CONTROL:inst1|OUTPUT:o|tri_invMix                   ; CONTROL:inst1|OUTPUT:o|WideOr0 ; yes                    ;
+; CONTROL:inst1|OUTPUT:o|LOOP                         ; CONTROL:inst1|OUTPUT:o|WideOr0 ; yes                    ;
+; CONTROL:inst1|NEXT:a|D[0]                           ; CONTROL:inst1|NEXT:a|Mux4      ; yes                    ;
+; CONTROL:inst1|NEXT:a|D[3]                           ; CONTROL:inst1|NEXT:a|Mux4      ; yes                    ;
+; CONTROL:inst1|NEXT:a|D[2]                           ; CONTROL:inst1|NEXT:a|Mux4      ; yes                    ;
+; CONTROL:inst1|NEXT:a|D[1]                           ; CONTROL:inst1|NEXT:a|Mux4      ; yes                    ;
+; CONTROL:inst1|OUTPUT:o|ENB                          ; CONTROL:inst1|OUTPUT:o|WideOr0 ; yes                    ;
+; CONTROL:inst1|OUTPUT:o|LOAD                         ; CONTROL:inst1|OUTPUT:o|WideOr0 ; yes                    ;
+; CONTROL:inst1|OUTPUT:o|rst                          ; CONTROL:inst1|OUTPUT:o|WideOr0 ; yes                    ;
+; Number of user-specified and inferred latches = 15  ;                                ;                        ;
++-----------------------------------------------------+--------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 520   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 3     ;
+; Number of registers using Asynchronous Clear ; 520   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 128   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |AES|DATAPATH:inst|Counter:inst|Count[3] ;
+; 4:1                ; 128 bits  ; 256 LEs       ; 256 LEs              ; 0 LEs                  ; No         ; |AES|DATAPATH:inst|outtri1[89]           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------+
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CONTROL:inst1|NEXT:a ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; S0             ; 0000  ; Unsigned Binary                          ;
+; S1             ; 0001  ; Unsigned Binary                          ;
+; S2             ; 0010  ; Unsigned Binary                          ;
+; S3             ; 0011  ; Unsigned Binary                          ;
+; S4             ; 0100  ; Unsigned Binary                          ;
+; S5             ; 0101  ; Unsigned Binary                          ;
+; S6             ; 0110  ; Unsigned Binary                          ;
+; S7             ; 0111  ; Unsigned Binary                          ;
+; S8             ; 1000  ; Unsigned Binary                          ;
+; S9             ; 1001  ; Unsigned Binary                          ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: CONTROL:inst1|OUTPUT:o ;
++----------------+-------+--------------------------------------------+
+; Parameter Name ; Value ; Type                                       ;
++----------------+-------+--------------------------------------------+
+; S0             ; 0000  ; Unsigned Binary                            ;
+; S1             ; 0001  ; Unsigned Binary                            ;
+; S2             ; 0010  ; Unsigned Binary                            ;
+; S3             ; 0011  ; Unsigned Binary                            ;
+; S4             ; 0100  ; Unsigned Binary                            ;
+; S5             ; 0101  ; Unsigned Binary                            ;
+; S6             ; 0110  ; Unsigned Binary                            ;
+; S7             ; 0111  ; Unsigned Binary                            ;
+; S8             ; 1000  ; Unsigned Binary                            ;
+; S9             ; 1001  ; Unsigned Binary                            ;
++----------------+-------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:inst|REG:inst10 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; n              ; 64    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:inst|REG:inst11 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; n              ; 64    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:inst|KeyExpansion:inst1|REG:inst11 ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; n              ; 128   ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:inst|REG:inst14 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; n              ; 64    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:inst|REG:inst3 ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; n              ; 128   ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:inst|REG:inst12 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; n              ; 64    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:01:13     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Sat Dec 18 20:23:12 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AES -c AES
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file subword.v
+    Info (12023): Found entity 1: SubWord
+Info (12021): Found 1 design units, including 1 entities, in source file subbytes.v
+    Info (12023): Found entity 1: SubBytes
+Info (12021): Found 1 design units, including 1 entities, in source file shiftrows.v
+    Info (12023): Found entity 1: ShiftRows
+Info (12021): Found 1 design units, including 1 entities, in source file s_box.v
+    Info (12023): Found entity 1: S_box
+Info (12021): Found 1 design units, including 1 entities, in source file rotword.v
+    Info (12023): Found entity 1: RotWord
+Info (12021): Found 1 design units, including 1 entities, in source file reg.v
+    Info (12023): Found entity 1: REG
+Info (12021): Found 1 design units, including 1 entities, in source file rcon.v
+    Info (12023): Found entity 1: Rcon
+Info (12021): Found 1 design units, including 1 entities, in source file output.v
+    Info (12023): Found entity 1: OUTPUT
+Info (12021): Found 1 design units, including 1 entities, in source file next.v
+    Info (12023): Found entity 1: NEXT
+Info (12021): Found 1 design units, including 1 entities, in source file mul2.v
+    Info (12023): Found entity 1: mul2
+Info (12021): Found 1 design units, including 1 entities, in source file mixcolumns.v
+    Info (12023): Found entity 1: MixColumns
+Info (12021): Found 1 design units, including 1 entities, in source file mixcol.v
+    Info (12023): Found entity 1: mixcol
+Info (12021): Found 1 design units, including 1 entities, in source file keyexpansion.v
+    Info (12023): Found entity 1: KeyExpansion
+Info (12021): Found 1 design units, including 1 entities, in source file invsubbytes.v
+    Info (12023): Found entity 1: InvSubBytes
+Info (12021): Found 1 design units, including 1 entities, in source file invshiftrows.v
+    Info (12023): Found entity 1: InvShiftRows
+Info (12021): Found 1 design units, including 1 entities, in source file invs_box.v
+    Info (12023): Found entity 1: InvS_box
+Info (12021): Found 1 design units, including 1 entities, in source file invmixcolumns.v
+    Info (12023): Found entity 1: InvMixColumns
+Info (12021): Found 1 design units, including 1 entities, in source file invmixcol.v
+    Info (12023): Found entity 1: InvMixcol
+Info (12021): Found 1 design units, including 1 entities, in source file insmul.v
+    Info (12023): Found entity 1: insmul
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
+    Info (12023): Found entity 1: DATAPATH
+Info (12021): Found 1 design units, including 1 entities, in source file current.v
+    Info (12023): Found entity 1: CURRENT
+Info (12021): Found 1 design units, including 1 entities, in source file counter.v
+    Info (12023): Found entity 1: Counter
+Info (12021): Found 1 design units, including 1 entities, in source file control.v
+    Info (12023): Found entity 1: CONTROL
+Info (12021): Found 1 design units, including 1 entities, in source file aes.v
+    Info (12023): Found entity 1: AES
+Info (12021): Found 1 design units, including 1 entities, in source file addw.v
+    Info (12023): Found entity 1: addW
+Info (12021): Found 1 design units, including 1 entities, in source file addroundkey.v
+    Info (12023): Found entity 1: AddRoundKey
+Info (12021): Found 1 design units, including 1 entities, in source file addrcon.v
+    Info (12023): Found entity 1: AddRcon
+Info (12127): Elaborating entity "AES" for the top level hierarchy
+Info (12128): Elaborating entity "CONTROL" for hierarchy "CONTROL:inst1"
+Info (12128): Elaborating entity "NEXT" for hierarchy "CONTROL:inst1|NEXT:a"
+Warning (10270): Verilog HDL Case Statement warning at NEXT.v(18): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at NEXT.v(18): inferring latch(es) for variable "D", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "D[0]" at NEXT.v(18)
+Info (10041): Inferred latch for "D[1]" at NEXT.v(18)
+Info (10041): Inferred latch for "D[2]" at NEXT.v(18)
+Info (10041): Inferred latch for "D[3]" at NEXT.v(18)
+Info (12128): Elaborating entity "CURRENT" for hierarchy "CONTROL:inst1|CURRENT:b"
+Info (12128): Elaborating entity "OUTPUT" for hierarchy "CONTROL:inst1|OUTPUT:o"
+Warning (10270): Verilog HDL Case Statement warning at OUTPUT.v(18): incomplete case statement has no default case item
+Warning (10240): Verilog HDL Always Construct warning at OUTPUT.v(16): inferring latch(es) for variable "ENB", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at OUTPUT.v(16): inferring latch(es) for variable "LOAD", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at OUTPUT.v(16): inferring latch(es) for variable "rst", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at OUTPUT.v(16): inferring latch(es) for variable "tri_text", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at OUTPUT.v(16): inferring latch(es) for variable "tri_key", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at OUTPUT.v(16): inferring latch(es) for variable "tri_keyex", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at OUTPUT.v(16): inferring latch(es) for variable "tri_shift", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at OUTPUT.v(16): inferring latch(es) for variable "tri_Mix", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at OUTPUT.v(16): inferring latch(es) for variable "tri_invMix", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at OUTPUT.v(16): inferring latch(es) for variable "tri_invshift", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at OUTPUT.v(16): inferring latch(es) for variable "tri_invSub", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at OUTPUT.v(16): inferring latch(es) for variable "tri_out_text1", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at OUTPUT.v(16): inferring latch(es) for variable "tri_out_text2", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at OUTPUT.v(16): inferring latch(es) for variable "LOOP", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "LOOP" at OUTPUT.v(16)
+Info (10041): Inferred latch for "tri_out_text2" at OUTPUT.v(16)
+Info (10041): Inferred latch for "tri_out_text1" at OUTPUT.v(16)
+Info (10041): Inferred latch for "tri_invSub" at OUTPUT.v(16)
+Info (10041): Inferred latch for "tri_invshift" at OUTPUT.v(16)
+Info (10041): Inferred latch for "tri_invMix" at OUTPUT.v(16)
+Info (10041): Inferred latch for "tri_Mix" at OUTPUT.v(16)
+Info (10041): Inferred latch for "tri_shift" at OUTPUT.v(16)
+Info (10041): Inferred latch for "tri_keyex" at OUTPUT.v(16)
+Info (10041): Inferred latch for "tri_key" at OUTPUT.v(16)
+Info (10041): Inferred latch for "tri_text" at OUTPUT.v(16)
+Info (10041): Inferred latch for "rst" at OUTPUT.v(16)
+Info (10041): Inferred latch for "LOAD" at OUTPUT.v(16)
+Info (10041): Inferred latch for "ENB" at OUTPUT.v(16)
+Info (12128): Elaborating entity "DATAPATH" for hierarchy "DATAPATH:inst"
+Info (12128): Elaborating entity "REG" for hierarchy "DATAPATH:inst|REG:inst10"
+Info (12128): Elaborating entity "Counter" for hierarchy "DATAPATH:inst|Counter:inst"
+Warning (10230): Verilog HDL assignment warning at Counter.v(8): truncated value with size 32 to match size of target (4)
+Warning (10230): Verilog HDL assignment warning at Counter.v(9): truncated value with size 32 to match size of target (4)
+Info (12128): Elaborating entity "KeyExpansion" for hierarchy "DATAPATH:inst|KeyExpansion:inst1"
+Info (12128): Elaborating entity "addW" for hierarchy "DATAPATH:inst|KeyExpansion:inst1|addW:inst"
+Info (12128): Elaborating entity "RotWord" for hierarchy "DATAPATH:inst|KeyExpansion:inst1|RotWord:inst4"
+Info (12128): Elaborating entity "SubWord" for hierarchy "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5"
+Info (12128): Elaborating entity "S_box" for hierarchy "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst"
+Info (12128): Elaborating entity "AddRcon" for hierarchy "DATAPATH:inst|KeyExpansion:inst1|AddRcon:inst6"
+Info (12128): Elaborating entity "REG" for hierarchy "DATAPATH:inst|KeyExpansion:inst1|REG:inst11"
+Info (12128): Elaborating entity "AddRoundKey" for hierarchy "DATAPATH:inst|AddRoundKey:inst2"
+Info (12128): Elaborating entity "SubBytes" for hierarchy "DATAPATH:inst|SubBytes:inst4"
+Info (12128): Elaborating entity "ShiftRows" for hierarchy "DATAPATH:inst|ShiftRows:inst5"
+Info (12128): Elaborating entity "MixColumns" for hierarchy "DATAPATH:inst|MixColumns:inst6"
+Info (12128): Elaborating entity "mixcol" for hierarchy "DATAPATH:inst|MixColumns:inst6|mixcol:inst"
+Info (12128): Elaborating entity "mul2" for hierarchy "DATAPATH:inst|MixColumns:inst6|mixcol:inst|mul2:inst"
+Info (12128): Elaborating entity "InvMixColumns" for hierarchy "DATAPATH:inst|InvMixColumns:inst7"
+Info (12128): Elaborating entity "InvMixcol" for hierarchy "DATAPATH:inst|InvMixColumns:inst7|InvMixcol:inst"
+Info (12128): Elaborating entity "insmul" for hierarchy "DATAPATH:inst|InvMixColumns:inst7|InvMixcol:inst|insmul:inst"
+Info (12128): Elaborating entity "InvShiftRows" for hierarchy "DATAPATH:inst|InvShiftRows:inst8"
+Info (12128): Elaborating entity "InvSubBytes" for hierarchy "DATAPATH:inst|InvSubBytes:inst9"
+Info (12128): Elaborating entity "InvS_box" for hierarchy "DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst"
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[127]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[126]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[125]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[124]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[123]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[122]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[121]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[120]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[119]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[118]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[117]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[116]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[115]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[114]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[113]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[112]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[111]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[110]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[109]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[108]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[107]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[106]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[105]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[104]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[103]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[102]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[101]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[100]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[99]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[98]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[97]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[96]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[95]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[94]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[93]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[92]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[91]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[90]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[89]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[88]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[87]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[86]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[85]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[84]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[83]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[82]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[81]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[80]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[79]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[78]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[77]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[76]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[75]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[74]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[73]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[72]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[71]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[70]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[69]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[68]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[67]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[66]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[65]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[64]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[63]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[62]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[61]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[60]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[59]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[58]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[57]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[56]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[55]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[54]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[53]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[52]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[51]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[50]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[49]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[48]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[47]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[46]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[45]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[44]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[43]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[42]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[41]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[40]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[39]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[38]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[37]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[36]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[35]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[34]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[33]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[32]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[31]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[30]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[29]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[28]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[27]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[26]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[25]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[24]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[23]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[22]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[21]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[20]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[19]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[18]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[17]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[16]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[15]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[14]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[13]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[12]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[11]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[10]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[9]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[8]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[7]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[6]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[5]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[4]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[3]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[2]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[1]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri1[0]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[127]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[126]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[125]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[124]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[123]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[122]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[121]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[120]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[119]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[118]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[117]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[116]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[115]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[114]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[113]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[112]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[111]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[110]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[109]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[108]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[107]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[106]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[105]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[104]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[103]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[102]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[101]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[100]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[99]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[98]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[97]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[96]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[95]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[94]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[93]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[92]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[91]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[90]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[89]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[88]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[87]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[86]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[85]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[84]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[83]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[82]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[81]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[80]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[79]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[78]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[77]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[76]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[75]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[74]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[73]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[72]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[71]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[70]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[69]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[68]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[67]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[66]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[65]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[64]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[63]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[62]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[61]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[60]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[59]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[58]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[57]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[56]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[55]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[54]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[53]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[52]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[51]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[50]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[49]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[48]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[47]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[46]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[45]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[44]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[43]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[42]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[41]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[40]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[39]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[38]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[37]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[36]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[35]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[34]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[33]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[32]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[31]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[30]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[29]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[28]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[27]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[26]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[25]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[24]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[23]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[22]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[21]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[20]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[19]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[18]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[17]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[16]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[15]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[14]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[13]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[12]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[11]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[10]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[9]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[8]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[7]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[6]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[5]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[4]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[3]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[2]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[1]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri2[0]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[127]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[126]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[125]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[124]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[123]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[122]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[121]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[120]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[119]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[118]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[117]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[116]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[115]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[114]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[113]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[112]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[111]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[110]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[109]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[108]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[107]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[106]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[105]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[104]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[103]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[102]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[101]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[100]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[99]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[98]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[97]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[96]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[95]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[94]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[93]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[92]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[91]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[90]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[89]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[88]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[87]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[86]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[85]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[84]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[83]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[82]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[81]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[80]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[79]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[78]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[77]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[76]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[75]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[74]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[73]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[72]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[71]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[70]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[69]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[68]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[67]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[66]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[65]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[64]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[63]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[62]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[61]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[60]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[59]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[58]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[57]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[56]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[55]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[54]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[53]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[52]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[51]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[50]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[49]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[48]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[47]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[46]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[45]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[44]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[43]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[42]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[41]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[40]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[39]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[38]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[37]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[36]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[35]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[34]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[33]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[32]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[31]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[30]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[29]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[28]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[27]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[26]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[25]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[24]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[23]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[22]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[21]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[20]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[19]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[18]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[17]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[16]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[15]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[14]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[13]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[12]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[11]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[10]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[9]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[8]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[7]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[6]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[5]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[4]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[3]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[2]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[1]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|outtri3[0]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[127]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[126]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[125]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[124]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[123]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[122]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[121]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[120]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[119]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[118]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[117]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[116]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[115]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[114]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[113]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[112]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[111]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[110]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[109]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[108]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[107]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[106]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[105]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[104]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[103]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[102]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[101]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[100]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[99]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[98]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[97]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[96]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[95]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[94]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[93]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[92]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[91]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[90]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[89]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[88]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[87]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[86]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[85]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[84]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[83]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[82]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[81]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[80]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[79]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[78]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[77]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[76]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[75]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[74]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[73]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[72]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[71]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[70]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[69]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[68]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[67]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[66]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[65]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[64]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[63]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[62]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[61]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[60]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[59]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[58]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[57]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[56]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[55]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[54]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[53]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[52]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[51]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[50]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[49]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[48]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[47]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[46]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[45]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[44]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[43]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[42]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[41]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[40]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[39]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[38]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[37]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[36]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[35]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[34]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[33]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[32]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[31]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[30]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[29]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[28]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[27]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[26]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[25]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[24]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[23]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[22]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[21]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[20]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[19]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[18]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[17]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[16]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[15]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[14]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[13]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[12]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[11]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[10]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[9]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[8]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[7]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[6]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[5]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[4]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[3]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[2]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[1]" into a selector
+    Warning (13048): Converted tri-state node "DATAPATH:inst|KeyExpansion:inst1|aw[0]" into a selector
+Info (276014): Found 20 instances of uninferred RAM logic
+    Info (276007): RAM logic "DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst8|Ram0" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst9|Ram0" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst10|Ram0" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst11|Ram0" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst12|Ram0" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst13|Ram0" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst14|Ram0" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst15|Ram0" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst|Ram0" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst1|Ram0" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst2|Ram0" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst3|Ram0" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst|Ram0" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst1|Ram0" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst2|Ram0" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst3|Ram0" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst4|Ram0" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst5|Ram0" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst6|Ram0" is uninferred due to asynchronous read logic
+    Info (276007): RAM logic "DATAPATH:inst|InvSubBytes:inst9|InvS_box:inst7|Ram0" is uninferred due to asynchronous read logic
+Warning (13044): Always-enabled tri-state buffer(s) removed
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[0]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[0]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[1]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[1]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[2]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[2]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[3]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[3]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[4]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[4]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[5]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[5]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[6]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[6]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[7]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[7]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[8]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[8]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[9]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[9]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[10]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[10]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[11]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[11]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[12]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[12]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[13]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[13]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[14]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[14]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[15]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[15]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[16]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[16]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[17]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[17]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[18]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[18]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[19]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[19]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[20]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[20]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[21]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[21]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[22]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[22]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[23]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[23]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[24]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[24]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[25]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[25]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[26]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[26]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[27]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[27]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[28]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[28]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[29]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[29]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[30]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[30]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b05[31]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[31]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[0]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[0]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[1]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[1]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[2]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[2]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[3]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[3]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[4]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[4]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[5]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[5]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[6]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[6]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[7]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[7]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[8]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[8]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[9]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[9]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[10]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[10]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[11]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[11]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[12]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[12]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[13]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[13]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[14]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[14]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[15]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[15]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[16]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[16]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[17]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[17]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[18]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[18]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[19]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[19]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[20]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[20]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[21]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[21]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[22]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[22]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[23]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[23]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[24]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[24]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[25]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[25]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[26]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[26]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[27]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[27]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[28]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[28]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[29]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[29]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[30]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[30]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b03[31]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[31]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[0]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[0]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[1]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[1]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[2]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[2]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[3]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[3]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[4]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[4]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[5]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[5]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[6]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[6]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[7]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[7]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[8]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[8]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[9]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[9]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[10]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[10]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[11]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[11]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[12]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[12]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[13]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[13]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[14]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[14]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[15]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[15]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[16]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[16]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[17]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[17]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[18]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[18]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[19]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[19]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[20]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[20]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[21]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[21]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[22]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[22]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[23]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[23]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[24]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[24]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[25]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[25]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[26]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[26]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[27]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[27]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[28]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[28]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[29]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[29]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[30]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[30]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b04[31]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[31]" into a wire
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[64]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[65]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[1]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[66]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[2]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[67]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[3]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[68]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[4]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[69]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[5]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[70]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[6]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[71]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[7]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[72]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[8]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[73]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[9]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[74]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[10]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[75]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[11]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[76]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[12]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[77]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[13]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[78]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[14]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[79]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[15]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[80]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[16]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[81]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[17]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[82]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[18]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[83]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[19]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[84]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[20]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[85]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[21]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[86]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[22]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[87]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[23]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[88]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[24]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[89]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[25]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[90]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[26]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[91]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[27]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[92]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[28]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[93]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[29]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[94]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[30]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[95]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst2|outW[31]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[96]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[24]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[25]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[30]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[29]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[27]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[26]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[31]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[28]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[97]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[1]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[98]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[2]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[99]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[3]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[100]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[4]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[101]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[5]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[102]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[6]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[103]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[7]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[104]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[8]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[0]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst1|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[1]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst1|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[6]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst1|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[5]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst1|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[3]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst1|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[2]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst1|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[7]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst1|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[4]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst1|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[105]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[9]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[106]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[10]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[107]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[11]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[108]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[12]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[109]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[13]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[110]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[14]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[111]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[15]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[112]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[16]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[8]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst2|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[9]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst2|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[14]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst2|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[13]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst2|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[11]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst2|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[10]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst2|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[15]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst2|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[12]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst2|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[113]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[17]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[114]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[18]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[115]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[19]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[116]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[20]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[117]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[21]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[118]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[22]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[119]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[23]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[120]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[24]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[16]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst3|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[17]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst3|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[22]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst3|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[21]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst3|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[19]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst3|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[18]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst3|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[23]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst3|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|b09[20]" to the node "DATAPATH:inst|KeyExpansion:inst1|SubWord:inst5|S_box:inst3|Ram0" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[121]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[25]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[122]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[26]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[123]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[27]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[124]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[28]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[125]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[29]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[126]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[30]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[127]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst3|outW[31]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[0]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[1]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[1]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[2]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[2]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[3]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[3]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[4]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[4]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[5]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[5]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[6]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[6]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[7]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[7]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[8]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[8]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[9]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[9]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[10]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[10]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[11]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[11]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[12]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[12]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[13]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[13]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[14]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[14]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[15]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[15]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[16]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[16]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[17]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[17]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[18]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[18]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[19]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[19]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[20]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[20]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[21]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[21]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[22]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[22]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[23]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[23]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[24]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[24]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[25]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[25]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[26]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[26]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[27]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[27]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[28]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[28]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[29]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[29]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[30]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[30]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[31]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst|outW[31]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[32]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[0]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[33]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[1]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[34]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[2]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[35]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[3]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[36]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[4]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[37]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[5]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[38]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[6]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[39]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[7]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[40]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[8]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[41]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[9]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[42]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[10]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[43]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[11]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[44]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[12]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[45]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[13]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[46]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[14]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[47]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[15]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[48]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[16]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[49]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[17]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[50]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[18]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[51]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[19]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[52]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[20]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[53]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[21]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[54]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[22]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[55]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[23]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[56]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[24]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[57]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[25]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[58]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[26]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[59]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[27]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[60]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[28]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[61]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[29]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[62]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[30]" into an OR gate
+    Warning (13047): Converted the fan-out from the tri-state buffer "DATAPATH:inst|KeyExpansion:inst1|inst1c[63]" to the node "DATAPATH:inst|KeyExpansion:inst1|addW:inst1|outW[31]" into an OR gate
+Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
+    Info (13026): Duplicate LATCH primitive "CONTROL:inst1|OUTPUT:o|LOAD" merged with LATCH primitive "CONTROL:inst1|OUTPUT:o|tri_text"
+Warning (13012): Latch CONTROL:inst1|OUTPUT:o|tri_out_text1 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CONTROL:inst1|CURRENT:b|Q[3]
+Warning (13012): Latch CONTROL:inst1|OUTPUT:o|tri_out_text2 has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CONTROL:inst1|CURRENT:b|Q[1]
+Warning (13012): Latch CONTROL:inst1|OUTPUT:o|tri_keyex has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CONTROL:inst1|CURRENT:b|Q[1]
+Warning (13012): Latch CONTROL:inst1|OUTPUT:o|tri_shift has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CONTROL:inst1|CURRENT:b|Q[3]
+Warning (13012): Latch CONTROL:inst1|OUTPUT:o|tri_text has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CONTROL:inst1|CURRENT:b|Q[1]
+Warning (13012): Latch CONTROL:inst1|OUTPUT:o|tri_Mix has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CONTROL:inst1|CURRENT:b|Q[3]
+Warning (13012): Latch CONTROL:inst1|OUTPUT:o|tri_invMix has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CONTROL:inst1|CURRENT:b|Q[3]
+Warning (13012): Latch CONTROL:inst1|OUTPUT:o|LOOP has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CONTROL:inst1|CURRENT:b|Q[3]
+Warning (13012): Latch CONTROL:inst1|NEXT:a|D[0] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CONTROL:inst1|CURRENT:b|Q[0]
+Warning (13012): Latch CONTROL:inst1|NEXT:a|D[3] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CONTROL:inst1|CURRENT:b|Q[3]
+Warning (13012): Latch CONTROL:inst1|NEXT:a|D[2] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CONTROL:inst1|CURRENT:b|Q[3]
+Warning (13012): Latch CONTROL:inst1|NEXT:a|D[1] has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CONTROL:inst1|CURRENT:b|Q[3]
+Warning (13012): Latch CONTROL:inst1|OUTPUT:o|ENB has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CONTROL:inst1|CURRENT:b|Q[3]
+Warning (13012): Latch CONTROL:inst1|OUTPUT:o|rst has unsafe behavior
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal CONTROL:inst1|CURRENT:b|Q[3]
+Info (144001): Generated suppressed messages file D:/HK5/CE213/LyThuyet/AES/Post_AES/output_files/AES.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 9531 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 132 input pins
+    Info (21059): Implemented 128 output pins
+    Info (21061): Implemented 9271 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 819 warnings
+    Info: Peak virtual memory: 4633 megabytes
+    Info: Processing ended: Sat Dec 18 20:24:28 2021
+    Info: Elapsed time: 00:01:16
+    Info: Total CPU time (on all processors): 00:01:15
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/HK5/CE213/LyThuyet/AES/Post_AES/output_files/AES.map.smsg.
+
+
